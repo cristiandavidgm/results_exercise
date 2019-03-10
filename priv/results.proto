@@ -1,0 +1,27 @@
+syntax = "proto2";
+
+message ResultMsg {
+  required string id = 1;
+  required string date = 2;
+  required string home_team = 3;
+  required string away_team = 4;
+  required string fthg = 5;
+  required string ftag = 6;
+  required string tfr = 7;
+  required string htgh = 8;
+  required string htag = 9;
+  required string htr = 10;
+}
+
+message ResultsMsg{
+  repeated ResultMsg results = 1;
+}
+
+message LeagueSeasonMsg{
+  required string league = 1;
+  required string season = 2;
+}
+
+message LeaguesSeasonsMsg{
+  repeated LeagueSeasonMsg leagues = 1;
+}

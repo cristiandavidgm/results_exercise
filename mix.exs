@@ -4,7 +4,7 @@ defmodule Results.MixProject do
   def project do
     [
       app: :results,
-      version: "0.1.0",
+      version: "0.0.1",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -27,7 +27,8 @@ defmodule Results.MixProject do
       {:jason, "~> 1.1"},
       {:plug_cowboy, "~> 2.0"},
       {:csv, "~> 2.2"},
-      {:exprotobuf, "~> 1.2.9"}
+      {:exprotobuf, "~> 1.2.9"},
+      {:distillery, "~> 2.0"}
     ]
   end
 end

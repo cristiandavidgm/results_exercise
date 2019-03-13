@@ -1,7 +1,9 @@
 %{
+  "artificery": {:hex, :artificery, "0.4.1", "90b1fcedb9034853b36dbea2174f9fc1172bd50b0686a723178103def5c9c1c8", [:mix], [], "hexpm"},
   "cowboy": {:hex, :cowboy, "2.6.1", "f2e06f757c337b3b311f9437e6e072b678fcd71545a7b2865bdaa154d078593f", [:rebar3], [{:cowlib, "~> 2.7.0", [hex: :cowlib, repo: "hexpm", optional: false]}, {:ranch, "~> 1.7.1", [hex: :ranch, repo: "hexpm", optional: false]}], "hexpm"},
   "cowlib": {:hex, :cowlib, "2.7.0", "3ef16e77562f9855a2605900cedb15c1462d76fb1be6a32fc3ae91973ee543d2", [:rebar3], [], "hexpm"},
   "csv": {:hex, :csv, "2.2.0", "910b6b6f888aa8b0f79bdca8abf4ce21d64c98fc87b6ba8b6ae7f2ed22551cfa", [:mix], [{:parallel_stream, "~> 1.0.4", [hex: :parallel_stream, repo: "hexpm", optional: false]}], "hexpm"},
+  "distillery": {:hex, :distillery, "2.0.12", "6e78fe042df82610ac3fa50bd7d2d8190ad287d120d3cd1682d83a44e8b34dfb", [:mix], [{:artificery, "~> 0.2", [hex: :artificery, repo: "hexpm", optional: false]}], "hexpm"},
   "exprotobuf": {:hex, :exprotobuf, "1.2.9", "f3cac1b0d0444da3c72cdfe80e394d721275dc80b1d7703ead9dad9267e93822", [:mix], [{:gpb, "~> 3.24", [hex: :gpb, repo: "hexpm", optional: false]}], "hexpm"},
   "gpb": {:hex, :gpb, "3.28.1", "6849b2f0004dc4e7644f4f67e7cdd18e893f0ab87eb7ad82b9cb1483ce60eed0", [:make, :rebar], [], "hexpm"},
   "grpc": {:git, "https://github.com/tony612/grpc-elixir.git", "8b1c225a87fbf6e4c3530690a37dd5f5dd390f54", []},

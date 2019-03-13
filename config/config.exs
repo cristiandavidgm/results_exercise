@@ -33,7 +33,8 @@ config :results, Results.HttpServer,
   adapter: Plug.Cowboy,
   plug: Results.HttpAPI,
   scheme: :http,
-  port: 8880
+  port: 8880,
+  ip: {0,0,0,0}
 
 config :results,
   maru_servers: [Results.HttpServer]

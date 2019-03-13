@@ -1,6 +1,6 @@
 defmodule Results.DbLoader do
   @moduledoc """
-  
+
     DbLoader is a module that runs in async mode, it is separated from the 
     LeagueSeasonDb module to allow this task to be used after the db has been
     loaded.
@@ -13,12 +13,14 @@ defmodule Results.DbLoader do
   end
 
   def run() do
-  	Results.ResultsApi.set_db_status(:loading)
+    Results.ResultsApi.set_db_status(:loading)
+
     csv_stream =
       Enum.drop(
         Application.app_dir(:results, "priv/Data.csv") |> File.stream!() |> CSV.decode(),
         1
       )
+
     Enum.each(csv_stream, fn {:ok, row} -> insert_row(row) end)
     Results.ResultsApi.set_db_status(:ok)
   end

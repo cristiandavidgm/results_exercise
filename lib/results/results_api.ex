@@ -1,6 +1,6 @@
 defmodule Results.ResultsApi do
   @moduledoc """
-  
+
     ResultsApi is intended to be the only interaction point whit the app, 
     accessing other modules directly is highly discouraged.
 

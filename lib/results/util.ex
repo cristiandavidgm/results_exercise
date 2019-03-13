@@ -1,6 +1,6 @@
 defmodule Results.Util do
   @moduledoc """
-  
+
   All common code belongs here
 
   """

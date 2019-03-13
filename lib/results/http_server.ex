@@ -95,7 +95,6 @@ defmodule Results.Router.Homepage do
   #   |> put_status(500)
   #   |> text("ERROR: #{inspect(e)}")
   # end
-
 end
 
 defmodule Results.HttpAPI do

@@ -28,7 +28,8 @@ defmodule Results.MixProject do
       {:plug_cowboy, "~> 2.0"},
       {:csv, "~> 2.2"},
       {:exprotobuf, "~> 1.2.9"},
-      {:distillery, "~> 2.0"}
+      {:distillery, "~> 2.0"},
+      {:mecks_unit, "~> 0.1.7", only: :test}
     ]
   end
 end

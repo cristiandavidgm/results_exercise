@@ -1,4 +1,11 @@
 defmodule Results.DbLoader do
+  @moduledoc """
+  
+    DbLoader is a module that runs in async mode, it is separated from the 
+    LeagueSeasonDb module to allow this task to be used after the db has been
+    loaded.
+
+  """
   use Task, restart: :transient
 
   def start_link() do

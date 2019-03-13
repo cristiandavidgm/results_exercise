@@ -14,7 +14,7 @@ defmodule Results.LeagueSeasonDb do
   end
 
   @doc """
-  Looks up for all the league season pairs for `name` stored in `server`.
+  Looks up for all the league season pairs available.
 
   Returns `{:ok, [LeagueSeason]}` or `:error` otherwise.
   """
@@ -23,7 +23,7 @@ defmodule Results.LeagueSeasonDb do
   end
 
   @doc """
-  Looks up for the results for `name` stored in `server`.
+  Returns all the results related to league and season provided.
 
   Returns `{:ok, result}` if the result exists, `:notfound` if not found
            or `:error` otherwise.
@@ -33,7 +33,7 @@ defmodule Results.LeagueSeasonDb do
   end
 
   @doc """
-  insert or update up for the results for `league-season` stored in server.
+  insert or update the given result for league and season provided.
 
   Returns `{:ok, result}`, `:notfound` or `:error` otherwise.
   """
@@ -44,19 +44,18 @@ defmodule Results.LeagueSeasonDb do
   @doc """
   set database status.
 
-  when database is "loading" querys will fail
+  when database is "loading" queries will fail
 
-  Returns `:ok` or `:error`.
+  Returns `{:ok, :ok}` or `{:ok, :loading}`.
   """
   def set_status(status) when status == :ok or status == :loading do
     GenServer.call(__MODULE__, {:set_status, status})
   end
 
   @doc """
-  Looks up for the results for `name` stored in `server`.
+  get database status.
 
-  Returns `{:ok, result}` if the result exists, `:notfound` if not found
-           or `:error` otherwise.
+  Returns `{:ok, status}`
   """
   def get_status() do
     GenServer.call(__MODULE__, :get_status)

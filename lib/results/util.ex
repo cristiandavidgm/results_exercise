@@ -1,9 +1,19 @@
 defmodule Results.Util do
+  @moduledoc """
+  
+  All common code belongs here
+
+  """
   alias Results.Exprotobuf.Data.ResultMsg
   alias Results.Exprotobuf.Data.ResultsMsg
   alias Results.Exprotobuf.Data.LeagueSeasonMsg
   alias Results.Exprotobuf.Data.LeaguesSeasonsMsg
 
+  @doc """
+  Receives a list of LeagueSeason maps every item in the list to LeagueSeasonMsg
+
+  Returns `[LeagueSeasonMsg]>`
+  """
   def leagues_to_proto(leagues) do
     leagues_msgs =
       Enum.map(leagues, fn %LeagueSeason{league: league, season: season} ->
